@@ -166,18 +166,18 @@ defaultContentLanguageInSubdir = false
   weight = 1
 
 [[Languages.en.menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
+  name = "Competitions"
+  url = "#competitions"
   weight = 2
 
 [[Languages.en.menu.main]]
-  name = "Posts"
-  url = "#posts"
+  name = "Exhibitions"
+  url = "#exhibitions"
   weight = 3
 
 [[Languages.en.menu.main]]
-  name = "Projects"
-  url = "#projects"
+  name = "Publications"
+  url = "#publications"
   weight = 4
 
 [[Languages.en.menu.main]]
