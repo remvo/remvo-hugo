@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 
-<article class="article article-project" itemscope itemtype="http://schema.org/Article">
+<article class="pub article article-project" itemscope itemtype="http://schema.org/Article">
 
   {{ partial "header_image.html" . }}
 
@@ -17,6 +17,50 @@
 
     {{ with .Params.external_link }}
     <a class="btn btn-primary btn-outline" href="{{ . }}" target="_blank">{{ i18n "open_project_site" }}</a>
+    {{ end }}
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">{{ i18n "date" }}</div>
+          <div class="col-xs-12 col-sm-9" itemprop="datePublished">
+            {{ .Date.Format $.Site.Params.date_format }}
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">{{ i18n "competition" }}</div>
+          <div class="col-xs-12 col-sm-9">
+            {{ with .Params.competition_url }}<a href="{{ . }}" target="_blank">{{ end }}
+            {{ .Params.competition | markdownify }}
+            {{ if .Params.competition_url }}</a>{{ end }}
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+
+    {{ with .Params.location }}
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">{{ i18n "location" }}</div>
+          <div class="col-xs-12 col-sm-9">{{ . | markdownify }}</div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
     {{ end }}
 
     <div class="article-style" itemprop="articleBody">

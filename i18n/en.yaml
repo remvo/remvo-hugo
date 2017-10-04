@@ -2,3 +2,9 @@
 
 - id: award
   translation: Award
+
+
+# Competition widget
+
+- id: competition
+  translation: Competition

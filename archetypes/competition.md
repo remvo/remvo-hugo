@@ -3,11 +3,15 @@ title = "{{ replace .TranslationBaseName "-" " " | title }}"
 date = {{ .Date }}
 draft = false
 
+competition = ""
+competition_url = ""
+location = ""
+
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
 tags = []
 
-# Project summary to display on homepage.
+# Competition summary to display on homepage.
 summary = ""
 
 # Optional image to display on homepage.
